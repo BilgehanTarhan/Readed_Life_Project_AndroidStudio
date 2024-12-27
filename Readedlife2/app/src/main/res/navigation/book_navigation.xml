@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_navigation"
+    app:startDestination="@id/recylerFragment">
+
+    <!-- DetailsFragment tanımı -->
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.readedlife.view.view.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <!-- DetailsFragment'ten RecylerFragment'e geçiş -->
+        <action
+            android:id="@+id/actiondetailsfragmentTo_RecylerFragment"
+            app:destination="@id/recylerFragment" />
+        <argument
+            android:name="bookId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="info"
+            app:argType="string" />
+    </fragment>
+
+    <!-- RecylerFragment tanımı -->
+    <fragment
+        android:id="@+id/recylerFragment"
+        android:name="com.example.readedlife.view.view.RecylerFragment"
+        android:label="fragment_recyler"
+        tools:layout="@layout/fragment_recyler">
+        <!-- RecylerFragment'e argümanlar -->
+        <action
+            android:id="@+id/action_RecylerFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,11 @@
+<!-- res/values/themes.xml -->
+<resources>
+    <!-- Tema için DayNight ve NoActionBar -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight">
+        <!-- Özelleştirmeler -->
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- ActionBar olmayan tema -->
+    </style>
+</resources>
